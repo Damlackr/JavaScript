@@ -30,4 +30,8 @@ console.log( typeof basarilimi); //boolean
 
 let yas;
 console.log(yas);
-console.log(typeof yas);
+console.log(typeof yas); // undefined
+
+yas1 = "";
+console.log(yas1);
+console.log(typeof yas1);
