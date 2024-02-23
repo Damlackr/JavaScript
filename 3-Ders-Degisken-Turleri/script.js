@@ -26,3 +26,8 @@ let basarilimi = (sinavNotu >= 50);
 
 console.log(basarilimi);
 console.log( typeof basarilimi); //boolean
+
+
+let yas;
+console.log(yas);
+console.log(typeof yas);
