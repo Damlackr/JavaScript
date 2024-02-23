@@ -28,7 +28,7 @@ let ogr2_Soyad = "Bilgi";
 let ogr2_dogumTarihi = "2010";
 let ogr2_metamtik1=40;
 let ogr2_metamtik2=40;
-let ogr2_metamtik3=70;
+let ogr2_metamtik3=50;
 //2
 
 let suankiYil =  new Date().getFullYear();
@@ -51,3 +51,5 @@ console.log(typeof ogr1_ortalama);
 
 //4
 
+console.log(ogr1_ortalama >= 50);
+console.log(ogr2_ortalama >= 50);
