@@ -38,3 +38,16 @@ console.log(ogr1_yas);
 
 let ogr2_yas = 2024 - Number(ogr2_dogumTarihi);
 console.log(ogr2_yas);
+
+//3
+
+let ogr1_ortalama = (ogr1_metamtik1 + ogr1_metamtik2 + ogr1_metamtik3)/3;
+console.log(parseFloat(ogr1_ortalama)); //ondalıklı kısmı yazdırmak için kullanılıyor.
+console.log(typeof ogr1_ortalama);
+
+let ogr2_ortalama = (ogr2_metamtik1 + ogr2_metamtik2 + ogr2_metamtik3)/3;
+console.log(ogr2_ortalama);
+console.log(typeof ogr1_ortalama);
+
+//4
+
