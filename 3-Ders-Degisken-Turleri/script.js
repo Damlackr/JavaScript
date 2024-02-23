@@ -19,3 +19,10 @@ let isim = "Sena";
 let soyad = "turan";
 
 console.log(isim + " " + soyad);
+
+
+let sinavNotu= 70;
+let basarilimi = (sinavNotu >= 50);
+
+console.log(basarilimi);
+console.log( typeof basarilimi); //boolean
