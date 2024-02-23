@@ -15,7 +15,7 @@
 3- Öğrencilerinin ders ortalama notunu değişkende saklayınız.
 4- Öğrencilerin 50 geçme notuna göre başarı durumlarını değişkende saklayınız.
 */
-
+//1
 let ogr1_ad= "Ada" ; 
 let ogr1_Soyad = "Bilgi";
 let ogr1_dogumTarihi = "2012";
@@ -25,10 +25,16 @@ let ogr1_metamtik3=80;
 
 let ogr2_ad= "Yiğit" ; 
 let ogr2_Soyad = "Bilgi";
-let ogr2_dogumTarihi = "2012";
+let ogr2_dogumTarihi = "2010";
 let ogr2_metamtik1=40;
 let ogr2_metamtik2=40;
 let ogr2_metamtik3=70;
+//2
 
+let suankiYil =  new Date().getFullYear();
 
+let ogr1_yas = suankiYil - parseInt(ogr1_dogumTarihi);
+console.log(ogr1_yas);
 
+let ogr2_yas = 2024 - Number(ogr2_dogumTarihi);
+console.log(ogr2_yas);
