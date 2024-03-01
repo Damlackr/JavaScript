@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="card-header">
+        <h3 class="cart-title h1" id="title">
+            Todo App 2
+        </h3>
+
+        <ul id="task-list">
+            <li>
+                Görev 1
+            </li>
+            <li>
+                Görev 2
+            </li>
+            <li>
+                Görev 3
+            </li>
+        </ul>
+    </div>
+    <script>
+        let sonuc;
+        sonuc = document.getElementById("title");
+        sonuc = document.getElementById("title").id;
+        sonuc = document.getElementById("title").className;
+        sonuc = document.getElementById("title").classList;
+
+        document.getElementById("title").style.fontSize = "30px";
+        document.getElementById("title").style.color="blue";
+        //document.getElementById("title").style.display = "none"; 
+
+        document.getElementById("title").innerText = "Todo App";
+        document.getElementById("title").innerHTML="<p>Todo App </p>"; //etiketi yorumlar
+
+        sonuc = document.querySelector("#title");
+        sonuc = document.querySelector(".card-header");
+        sonuc = document.querySelector("div");
+
+        sonuc = document.querySelector("Li");
+        sonuc = document.querySelector("li:first-child");
+        sonuc = document.querySelector("li:last-child");
+        sonuc = document.querySelector("li:nth-child(1)");
+
+
+        console.log(sonuc);
+    </script>
+
+</body>
+</html>
