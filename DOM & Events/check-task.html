@@ -190,9 +190,11 @@
         }
 
         for(let gorev of gorevListesi) {
-            if
+            if(gorev.id == selectedTask.id) {
+                gorev.durum = durum;
+            }
         }
-
+        console.log(gorevListesi);
     }
 
 
