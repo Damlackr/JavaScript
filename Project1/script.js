@@ -34,13 +34,21 @@ var models = [
 var index = 0;
 var slaytCount = models.length;
 
-showSlide(index);
+var interval;
+
+var settings={
+    duration : '1000',
+    random : false,
+
+};
+
+
+init(settings);
 
 document.querySelector('.fa-arrow-circle-left').addEventListener('click', function(){
 
     index--;
     showSlide(index);
-
     console.log(index);
 
 });
@@ -52,6 +60,52 @@ document.querySelector('.fa-arrow-circle-right').addEventListener('click', funct
     console.log(index);
 
 });
+
+document.querySelectorAll('.arrow').forEach(function(item){
+    item.addEventListener('mouseenter',function(){
+        clearInterval(interval);
+    });
+});
+
+document.querySelectorAll('.arrow').forEach(function(item){
+    item.addEventListener('mouseleave', function(){
+        init(settings);
+    });
+});
+
+function init(settings){
+
+    var prev; //önceki
+
+    //setTimeout // belli bir sonra 1 kere işletiyor
+    //setInterval // sürekli tekrar eder
+    //clearInterval // sürekli tekrar eder
+
+    interval = setInterval(function(){
+        
+        if(settings.random){
+            do{
+            index = Math.floor( Math.random() * slaytCount);
+            }while(index == prev)
+            prev = index;
+            //random index
+            }else{
+                //artan index
+                if(slaytCount == index+1){
+                    index = -1;
+                }
+
+                showSlide(index);
+                console.log(index);
+                index++;
+            }
+  
+        showSlide(index);
+
+    },settings.duration)
+
+
+}
 
 function showSlide(i){
 
