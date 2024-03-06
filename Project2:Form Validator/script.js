@@ -27,6 +27,15 @@ function checkEmail(input){
    }
 };
 
+function checkPhone(input){
+    var exp = /^\d{10}$/;
+    if(!exp.test(input.value)){
+        error(input,'Telefon 10 karakterli olmalıdır')
+    }else{
+        succes(phone);
+    }
+}
+
 function checkRequired(/*input*/ inputs){
     //console.log(input);
     inputs.forEach(function(input) { 
@@ -36,6 +45,22 @@ function checkRequired(/*input*/ inputs){
         succes(input);
     }
 });
+}
+
+function checkLenght(input, min,max){
+    if(input.value.length < min){   
+        error(input, `${input.id} en az ${min} karakter olmalıdır.`)
+    }else if(input.value.length > max){
+        error(input, `${input.id} en az ${max} karakter olmalıdır.`)
+    }else{
+        succes(input);
+    }
+}
+
+function checkPasswords(input1, input2){
+    if(input1.value !== input2.value){
+        error(input2,'Parolalar eşleşmiyor');
+    }
 }
 
 form.addEventListener('submit',function(e){
@@ -77,9 +102,14 @@ form.addEventListener('submit',function(e){
     // }else{
     //     succes(repassword);
     // }
-    checkRequired([username,email,password,repassword]);
+    checkRequired([username,email,phone,password,repassword]);
     //checkRequired(email);
     //checkRequired(password);
     //checkRequired(repassword);
     checkEmail(email);
+    checkLenght(username,7,15);
+    checkLenght(password,7,12);
+    checkLenght(repassword,7,12);
+    checkPasswords(password,repassword);
+    checkPhone(phone);
 });
